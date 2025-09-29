@@ -1,0 +1,98 @@
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 650px;
+  background: rgba(20, 20, 20, 0.9);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  animation: fadeIn 0.8s ease;
+}
+
+h1 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #00d4ff;
+}
+
+#status {
+  margin-bottom: 15px;
+  font-style: italic;
+  color: #bbb;
+}
+
+#result {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.info {
+  background: #1e1e1e;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #333;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: slideUp 0.5s ease forwards;
+}
+
+.info b {
+  color: #00d4ff;
+}
+
+/* Карта */
+#map {
+  height: 300px;
+  border-radius: 12px;
+  margin-top: 15px;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Аниме-тянка */
+.anime-girl {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 150px;
+  z-index: 1000;
+  animation: bounce 2s infinite;
+}
+
+.anime-girl img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
